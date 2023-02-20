@@ -1,9 +1,10 @@
+package basic;
+
 
 public class VariableExample {
 
 	public static void main(String[] args) {
 		/*
-		 
 		 # 변수 (variable)
 		 
 		 1. 변수는 데이터가 저장되는 공간에 이름을 붙여놓는 것입니다.
