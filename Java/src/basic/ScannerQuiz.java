@@ -17,6 +17,8 @@ public class ScannerQuiz {
 		 출생년도는 입력사항이 아닙니다.)
 		 */
 		
+		// scanner + ctrl space
+		
 		Scanner sc = new Scanner(System.in);
 		
 		
@@ -26,8 +28,13 @@ public class ScannerQuiz {
 		System.out.printf("나이: ");
 		int age = sc.nextInt();
 		
-		System.out.printf("이름: %s\n나이: %d세\n출생년도: %d년",name, age, 2023 - age);
+		System.out.printf("이름: %s\n나이: %d세\n출생년도: %d년"
+				,name, age, 2023 - age);
 		
+		
+//		 System.out.println("이름: " + name);
+//		 System.out.println("나이: " + age + "세");
+//		 System.out.println("출생년도: " + (2023-age) + "년");
 		
 		
 		sc.close();
