@@ -48,7 +48,27 @@ public class IfQuiz05 {
 		System.out.printf("평균 점수:  %.1f\n", avg);
 		System.out.println("당신의 학점은 " + point + "입니다.");
 
-
+		System.out.println("-------------------------");
+		
+		if(avg >= 90) {
+			if(avg >= 95) { //A+ 인 경우
+				point = "A+";
+			} else { //A0 인 경우
+				point = "A0";
+			}
+		} else if(avg >= 80) { //B 인 경우 
+			point = "B";
+		} else if(avg >= 70) { //C 인 경우 
+			point = "C";
+		} else if(avg >= 60) { //D 인 경우 
+			point = "D";
+		} else { //F 인 경우
+			point = "F";
+		}
+		
+		System.out.printf("평균 점수:  %.1f\n", avg);
+		System.out.println("당신의 학점은 " + point + "입니다.");
+		
 		sc.close();
 
 
