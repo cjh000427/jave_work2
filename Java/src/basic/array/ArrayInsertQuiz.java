@@ -49,7 +49,7 @@ public class ArrayInsertQuiz {
 			String name = sc.next();
 
 			if(name.equals("배불러")) {
-				System.out.println("입력을 종료합니다.");
+				System.out.println("입력을 종료합니다."); 
 				break;
 			}
 

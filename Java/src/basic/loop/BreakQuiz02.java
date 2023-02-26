@@ -2,7 +2,7 @@ package basic.loop;
 
 import java.util.Scanner;
 
-public class BreakQuiz02 {
+public class BreakQuiz02 { 
 
 	public static void main(String[] args) {
 

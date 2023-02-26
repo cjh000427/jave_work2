@@ -18,14 +18,6 @@ public class LoopNesting2_Re {
         */
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("정수 : ");
 		int num = sc.nextInt();
