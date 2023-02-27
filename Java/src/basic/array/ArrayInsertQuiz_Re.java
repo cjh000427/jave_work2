@@ -28,24 +28,28 @@ public class ArrayInsertQuiz_Re {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("음식을 입력하세요.");
 
+		boolean flag = false;
+		
 		for(int i=0; i<foods.length; i++) {
 
 			System.out.print("> ");
 			String name = sc.next();
 			
-
+				
 			if(name.equals("배불러")) {
 				System.out.println("입력을 종료합니다.");
 				break;
 			}
+			
+			
+			
 
 			foods[i] = name;
 			
-			if(name.equals(foods[i]) == name.equals(foods[i-1])) {
-				System.out.println("이미 존재하는 음식입니다!");
 				
-			}
+			
 		}
+		
 
 		System.out.println("-----------------------------------");
 
