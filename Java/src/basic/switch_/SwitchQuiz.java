@@ -14,7 +14,7 @@ public class SwitchQuiz {
 		  결과를 말씀해 주세요.
 		 */
 		
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in); 
 		
 		System.out.print("정수1: ");
 		int num1 = sc.nextInt();

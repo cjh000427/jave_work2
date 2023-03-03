@@ -7,8 +7,8 @@ public class ArrayModify {
 
 	public static void main(String[] args) {
 
-		String[] foods = {"삼겹살", "족발", "피자", "햄버거"};
-		System.err.println(Arrays.toString(foods));
+		String[] foods = {"삼겹살", "족발", "피자", "햄버거"}; 
+		System.out.println(Arrays.toString(foods));
 		
 		foods[0] = "치킨"; // 삼겹살에서 치킨으로 수정
 		foods[2] = "탕수육"; // 피자에서 탕수육으로 수정

@@ -1,0 +1,29 @@
+package chap1_CJH;
+
+public class Solution02 {
+
+	public static void main(String[] args) {
+
+		int[] nums = {4, 2, 6, 1, 3};
+		
+		
+		String star = "*";
+		for(int i=0; i<nums.length; i++) {
+			if(nums[i]<=6) {
+				while(true) {
+					if(i <= nums[i]) {
+						System.out.print(star);
+					} 
+					System.out.println();
+					break;
+				}
+			}
+		}
+		
+		
+		
+		
+		
+	}
+
+}

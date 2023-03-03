@@ -1,0 +1,10 @@
+package basic.array;
+
+public class Array2DQuiz {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

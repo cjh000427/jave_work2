@@ -16,7 +16,7 @@ public class ForQuiz01 {
 		
 		for(int i = 1;i<=19; i++) {
 			int total = num * i;
-			System.out.printf("%d x %d = %d\n", num, i, total);
+			System.out.printf("%d x %d = %d\n", num, i, total); 
 		}
 		
 		

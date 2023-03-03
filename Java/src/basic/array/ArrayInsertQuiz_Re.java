@@ -1,5 +1,6 @@
 package basic.array;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArrayInsertQuiz_Re {
@@ -26,7 +27,7 @@ public class ArrayInsertQuiz_Re {
 		
 		String[] foods = new String[50];
 		Scanner sc = new Scanner(System.in);
-		System.out.println("음식을 입력하세요.");
+		System.out.println("음식을 입력하세요."); 
 
 		
 		for(int i=0; i<foods.length; i++) {
@@ -34,6 +35,7 @@ public class ArrayInsertQuiz_Re {
 			System.out.print("> ");
 			String name = sc.next();
 			
+<<<<<<< HEAD
 				
 			if(name.equals("배불러")) {
 				System.out.println("입력을 종료합니다.");
@@ -54,6 +56,26 @@ public class ArrayInsertQuiz_Re {
 			
 			if(isNotFoodsArray) {
 				foods[i] = name;
+=======
+
+			if(name.equals("배불러")) { 
+				System.out.println("입력을 종료합니다.");
+				break;
+			}
+
+			boolean isNotInFoodsArray = true;
+			for(int k=0; k<i; k++) {
+				if(name.equals(foods[k])) {
+					System.out.println("이미 존재하는 음식입니다. ");
+					i--;
+					isNotInFoodsArray = false;
+					break;
+				}
+			}
+			
+			if(isNotInFoodsArray) {
+				foods[i] = name;				
+>>>>>>> d74431a7929ee2ff3d76622f39e43b0a1e057850
 			}
 			
 			

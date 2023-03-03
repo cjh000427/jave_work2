@@ -11,7 +11,7 @@ public class WhileQuiz02 {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("정수를 입력하세요: ");
+		System.out.print("정수를 입력하세요: "); 
 		int num = sc.nextInt();
 		
 		int i = 1; //begin
