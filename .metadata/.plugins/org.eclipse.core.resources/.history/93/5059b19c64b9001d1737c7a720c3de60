@@ -1,0 +1,29 @@
+package oop.constructor;
+
+public class Phone {
+
+	String model;
+	String color;
+	int price;
+	
+	void showSpec() {
+		System.out.println("*** 핸드폰의 정보 ***");
+		System.out.println("모델명: " + model);
+		System.out.println("색상: " + color);
+		System.out.println("가격: " + price + "원");
+	}
+	
+	
+	
+	
+	
+	
+	
+}
+
+
+
+
+
+
+

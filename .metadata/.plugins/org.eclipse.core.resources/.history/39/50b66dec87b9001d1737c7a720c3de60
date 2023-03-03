@@ -1,0 +1,21 @@
+package oop.string;
+
+public class StringMethod {
+
+	public static void main(String[] args) {
+
+		String str = "Hello java";
+		
+		//charAt(index): 문자열 인덱스에 따른 단일 문자 반환.
+		char c = str.charAt(4);
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

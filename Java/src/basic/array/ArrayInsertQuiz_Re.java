@@ -22,27 +22,26 @@ public class ArrayInsertQuiz_Re {
 		- 입력을 받았는데 이미 배열에 존재하는 음식이라면
 		'이미 존재하는 음식입니다.' 를 출력하고
 		다시 새로운 음식을 입력받을 수 있도록 코드를 제어해 보세요.
-		
+
 		 */
-		
+
 		String[] foods = new String[50];
 		Scanner sc = new Scanner(System.in);
 		System.out.println("음식을 입력하세요."); 
 
-		
+
 		for(int i=0; i<foods.length; i++) {
 
 			System.out.print("> ");
 			String name = sc.next();
-			
-<<<<<<< HEAD
-				
+
+
 			if(name.equals("배불러")) {
 				System.out.println("입력을 종료합니다.");
 				break;
 			}
-			
-			
+
+
 			boolean isNotFoodsArray = true;
 			for(int k=0; k<i; k++) {
 				if(name.equals(foods[k])) {
@@ -51,70 +50,68 @@ public class ArrayInsertQuiz_Re {
 					isNotFoodsArray = false;
 					break;
 				}
-				
+
 			}
-			
+
 			if(isNotFoodsArray) {
 				foods[i] = name;
-=======
 
-			if(name.equals("배불러")) { 
-				System.out.println("입력을 종료합니다.");
-				break;
-			}
-
-			boolean isNotInFoodsArray = true;
-			for(int k=0; k<i; k++) {
-				if(name.equals(foods[k])) {
-					System.out.println("이미 존재하는 음식입니다. ");
-					i--;
-					isNotInFoodsArray = false;
+				if(name.equals("배불러")) { 
+					System.out.println("입력을 종료합니다.");
 					break;
 				}
+
+				boolean isNotInFoodsArray = true;
+				for(int k=0; k<i; k++) {
+					if(name.equals(foods[k])) {
+						System.out.println("이미 존재하는 음식입니다. ");
+						i--;
+						isNotInFoodsArray = false;
+						break;
+					}
+				}
+
+				if(isNotInFoodsArray) {
+					foods[i] = name;				
+				}
+
+
 			}
-			
-			if(isNotInFoodsArray) {
-				foods[i] = name;				
->>>>>>> d74431a7929ee2ff3d76622f39e43b0a1e057850
+
+			System.out.println("-----------------------------------");
+
+			System.out.print("내가 먹고 싶은 음식들: ");
+			for(String f : foods) {
+				if(f==null) break;
+				System.out.print(f + " ");
+
 			}
-			
-			
+
+
+
+			sc.close();
+
+			///////////////////////////////
+			//		int j;
+			//		for(j=0; j<foods.length; j++) {
+			//			if(name.equals(foods[j])) {
+			//				System.out.println("이미 존재하는 음식입니다.");
+			//				i--;
+			//				break;
+			//				
+			//			}
+			//		}
+			//		
+			//		if(j==foods.length) {
+			//			foods[i] = name;
+			//		}
+
+
+
+
+
 		}
-		
-		System.out.println("-----------------------------------");
 
-		System.out.print("내가 먹고 싶은 음식들: ");
-		for(String f : foods) {
-			if(f==null) break;
-			System.out.print(f + " ");
-
-		}
-
-
-
-		sc.close();
-
-		///////////////////////////////
-//		int j;
-//		for(j=0; j<foods.length; j++) {
-//			if(name.equals(foods[j])) {
-//				System.out.println("이미 존재하는 음식입니다.");
-//				i--;
-//				break;
-//				
-//			}
-//		}
-//		
-//		if(j==foods.length) {
-//			foods[i] = name;
-//		}
-		
-		
-		
-		
-		
-		
-		
 	}
-
 }
+
