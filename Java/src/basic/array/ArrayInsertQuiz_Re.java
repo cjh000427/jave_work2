@@ -28,7 +28,6 @@ public class ArrayInsertQuiz_Re {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("음식을 입력하세요.");
 
-		boolean flag = false;
 		
 		for(int i=0; i<foods.length; i++) {
 
@@ -42,15 +41,24 @@ public class ArrayInsertQuiz_Re {
 			}
 			
 			
-			
-
-			foods[i] = name;
-			
+			boolean isNotFoodsArray = true;
+			for(int k=0; k<i; k++) {
+				if(name.equals(foods[k])) {
+					System.out.println("이미 존재하는 음식입니다.");
+					i--;
+					isNotFoodsArray = false;
+					break;
+				}
 				
+			}
+			
+			if(isNotFoodsArray) {
+				foods[i] = name;
+			}
+			
 			
 		}
 		
-
 		System.out.println("-----------------------------------");
 
 		System.out.print("내가 먹고 싶은 음식들: ");
@@ -62,11 +70,26 @@ public class ArrayInsertQuiz_Re {
 
 
 
-
-
-
 		sc.close();
 
+		///////////////////////////////
+//		int j;
+//		for(j=0; j<foods.length; j++) {
+//			if(name.equals(foods[j])) {
+//				System.out.println("이미 존재하는 음식입니다.");
+//				i--;
+//				break;
+//				
+//			}
+//		}
+//		
+//		if(j==foods.length) {
+//			foods[i] = name;
+//		}
+		
+		
+		
+		
 		
 		
 		
