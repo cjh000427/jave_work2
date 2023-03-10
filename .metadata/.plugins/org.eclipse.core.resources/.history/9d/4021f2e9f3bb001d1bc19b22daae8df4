@@ -1,0 +1,18 @@
+package oop.modi.protec.pac2;
+
+import oop.modi.protec.pac1.A;
+
+public class C {
+
+	A a1 = new A(30);
+	
+	
+	
+	
+}
+
+
+
+
+
+

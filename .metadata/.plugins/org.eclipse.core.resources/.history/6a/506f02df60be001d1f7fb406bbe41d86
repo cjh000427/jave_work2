@@ -1,0 +1,5 @@
+package chap2_CJH.quiz01;
+
+public class Student extends Person {
+
+}

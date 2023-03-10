@@ -1,0 +1,19 @@
+package etc.api.util.arrays;
+
+public class ArraysQuiz {
+
+	public static void main(String[] args) {
+
+		String[] participant = {"홍길동", "김길동", "김철수", "최철수", "박영희"};
+		String[] completion = {"홍길동", "김길동", "박영희", "김철수"};
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

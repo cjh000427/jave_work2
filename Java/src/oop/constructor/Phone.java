@@ -25,7 +25,7 @@ public class Phone {
 
 	//생성자 선언!
 	Phone() { // -> 기본 생성자.
-		System.out.println("기본 생성자가 호출!");
+		System.out.println("기본 생성자 호출!");
 		model = "폴더폰";
 		color = "회색";
 		price = 200000;

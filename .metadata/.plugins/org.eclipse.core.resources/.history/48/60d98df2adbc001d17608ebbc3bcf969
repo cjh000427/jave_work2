@@ -1,0 +1,24 @@
+package oop.poly.car;
+
+public class Car {
+
+	HTire frontLeft;
+	HTire frontRight;
+	NTire rearLeft;
+	NTire rearRight;
+	
+	void run() {
+		System.out.println("자동차가 달립니다~");
+	}
+	
+	
+	
+	
+	
+	
+}
+
+
+
+
+

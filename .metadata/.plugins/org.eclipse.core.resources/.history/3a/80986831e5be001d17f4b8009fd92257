@@ -1,0 +1,5 @@
+package etc.api.lang.obj;
+
+public class Person {
+
+}

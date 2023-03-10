@@ -1,0 +1,29 @@
+package oop.abs.good;
+
+public class SeoulStore extends HeadStore {
+
+	@Override
+	public void orderApple() {
+		
+	}
+
+	@Override
+	public void orderBanana() {
+		
+	}
+
+	@Override
+	public void orderGrape() {
+		
+	}
+
+	
+	
+	
+	
+}
+
+
+
+
+

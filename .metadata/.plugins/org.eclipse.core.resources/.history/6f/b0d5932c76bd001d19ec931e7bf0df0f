@@ -1,0 +1,25 @@
+package oop.final_.field;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+
+		Person kim = new Person("김철수");
+//		kim.nation = "미국"; (x)
+//		kim.name = "김마이클"; (x)
+		kim.age = 30;
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+

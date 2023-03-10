@@ -1,0 +1,7 @@
+package oop.inter.basic;
+
+import oop.inter.Inter;
+
+public interface Inter2 extends Inter{
+
+}

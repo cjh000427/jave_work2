@@ -1,0 +1,23 @@
+package oop.poly.casting;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+
+		Parent p = new Parent();
+		p.n1 = 1;
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}
+
+
+
+
+

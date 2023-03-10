@@ -1,0 +1,43 @@
+package etc.execption.basic;
+
+import java.util.Scanner;
+
+public class MultiCatchExample {
+
+	public static void main(String[] args) {
+
+		// 4가지 종류 에러
+		
+		Scanner sc = new Scanner(System.in);
+		int[] arr = new int[5];
+		
+		try {
+			System.out.print("정수: ");
+			int n = sc.nextInt();
+			
+			int result = 100 /n;
+			
+			System.out.println(arr[result]);
+			
+			String s = null;
+			s.equals("메롱");
+		} catch(Exception e) {
+			System.out.println("에러 발생!");
+		}
+		
+		
+		
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+

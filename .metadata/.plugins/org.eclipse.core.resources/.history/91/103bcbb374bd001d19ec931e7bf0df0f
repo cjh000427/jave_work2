@@ -1,0 +1,9 @@
+package oop.final_.field;
+
+public class Person {
+
+	final String nation;
+	String name;
+	int age;
+	
+}

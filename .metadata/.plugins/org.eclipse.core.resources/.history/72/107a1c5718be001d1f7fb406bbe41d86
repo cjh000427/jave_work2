@@ -1,0 +1,16 @@
+package oop.inter.basic;
+
+public interface Inter2 extends Inter{
+
+	
+	
+	
+	
+	
+	
+}
+
+
+
+
+

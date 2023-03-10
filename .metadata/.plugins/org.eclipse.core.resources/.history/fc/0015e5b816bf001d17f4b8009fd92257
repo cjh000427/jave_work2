@@ -1,0 +1,16 @@
+package etc.api.util.arrays;
+
+public class ArraysExample {
+
+	public static void main(String[] args) {
+
+		//배열의 복사
+		char[] arr = {'J', 'A', 'V', 'A'};
+		
+		
+		
+		
+		
+	}
+
+}

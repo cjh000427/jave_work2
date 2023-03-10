@@ -1,0 +1,15 @@
+package chap2_CJH.quiz01;
+
+public class Employee extends Person {
+
+	public Person(String name, String age, String departments) {
+		super(name, age);
+		return "부서: " + departments;
+	}
+
+	
+	
+	
+	
+	
+}

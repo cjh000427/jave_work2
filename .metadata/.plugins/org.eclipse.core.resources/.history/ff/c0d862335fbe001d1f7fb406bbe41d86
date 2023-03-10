@@ -1,0 +1,20 @@
+package chap2_CJH.quiz01;
+
+public class Employee extends Person {
+
+	public Employee(String name, String age) {
+		super(name, age);
+		// TODO Auto-generated constructor stub
+	}
+
+	public String Info(String name, String age, String departments) {
+		super(name, age);
+		
+	}
+
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,10 @@
+package oop.inter.basic;
+
+/*
+ 1. 인터페이스를 작성한 후에는 클래스를 생성해서
+  인터페이스에 명세된 내용을 구현하시면 됩니다.
+ */
+
+public class ImplClass1 {
+
+}

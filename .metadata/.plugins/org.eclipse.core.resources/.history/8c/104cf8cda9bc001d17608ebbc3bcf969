@@ -1,0 +1,25 @@
+package oop.poly.car;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+
+		Sonata s1 = new Sonata();
+		Sonata s2 = new Sonata();
+		Sonata s3 = new Sonata();
+		
+		
+		
+		
+		
+		
+	}
+
+}
+
+
+
+
+
+
+

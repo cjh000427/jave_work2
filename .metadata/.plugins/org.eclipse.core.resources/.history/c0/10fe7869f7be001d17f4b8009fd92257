@@ -1,0 +1,27 @@
+package etc.api.lang.stringbuilder;
+
+public class StrTest {
+
+	public static void main(String[] args) {
+
+		long start = System.currentTimeMillis();
+		
+		//String test
+		
+		
+		long end = System.currentTimeMillis();
+		
+		
+		
+		
+	}
+
+}
+
+
+
+
+
+
+
+

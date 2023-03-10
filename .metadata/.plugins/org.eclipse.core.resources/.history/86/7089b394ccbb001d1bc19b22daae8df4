@@ -1,0 +1,16 @@
+package oop.this_super;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+
+		Player p1 = new Player();
+		p1.name = "전사1";
+		p1.characterInfo();
+		
+		
+		
+
+	}
+
+}

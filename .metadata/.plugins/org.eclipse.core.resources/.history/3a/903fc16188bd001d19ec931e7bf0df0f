@@ -1,0 +1,17 @@
+package oop.inter;
+
+public interface Inter {
+
+	//인터페이스에서 변수를 선언하면 상수(static final)로 지정됩니다.
+	int n = 5;
+	
+	//인터페이스에서 메서드를 선언하면 추상 메서드로 지정됩니다.
+	void method1();
+	
+}
+
+
+
+
+
+
