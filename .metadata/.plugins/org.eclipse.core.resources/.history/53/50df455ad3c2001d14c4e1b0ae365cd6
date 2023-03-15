@@ -33,6 +33,18 @@ public class Solution04 {
 			}
 		}
 
+
+
+		//나의 답
+		//		for(int i=0; i<stuNum.length;i++) {
+		//			for(int j=0; j<success.length; j++) {
+		//				if(stuNum[i] == success[j]) {
+		//					break;
+		//				} 
+		//			}
+		//			System.out.printf("과제를 안 낸 학생의 번호: %d \n" , stuNum[i]);
+		//		}
+
 		/* 선생님 답
 		boolean[] isSubmit = new boolean[10];
 
@@ -49,7 +61,7 @@ public class Solution04 {
 		}
 		*/
 
-		sc.close();
+
 
 
 

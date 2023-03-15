@@ -141,7 +141,7 @@ public class LottoSimulator {
 		System.out.println("5등 횟수: " + prize5);
 		System.out.println("꽝 횟수: " + failCnt);
 		System.out.println("1등까지 사용한 금액: " + (buyLotto*1000) + "원");
-		System.out.println(buyLotto + "번 구매함");
+		
 		
 	}
 

@@ -31,7 +31,7 @@ public class Solution03 {
 			System.out.printf("%d \t %d \n", scores[i],rank[i]);
 		}
 
-
+		sc.close();
 
 
 	}
