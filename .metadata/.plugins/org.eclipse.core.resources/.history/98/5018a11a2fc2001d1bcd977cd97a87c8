@@ -1,0 +1,47 @@
+package etc.api.io.buffered;
+
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+public class BufferedInputStreamEx {
+
+	public static void main(String[] args) {
+
+		FileInputStream fis = null;
+		BufferedInputStream bis = null;
+		
+		try {
+			fis = new FileInputStream("C:\\Work\\file\\merong.txt");
+			bis = new BufferedInputStream(fis);
+			
+			
+			
+			
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+

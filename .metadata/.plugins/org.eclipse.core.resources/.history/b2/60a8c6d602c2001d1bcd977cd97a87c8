@@ -1,0 +1,18 @@
+package etc.generic.bad;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+
+		Box box = new Box();
+		box.setObj("홍길동");
+		
+		Box box2 = new Box();
+		box2.setObj("길철수");
+		
+		
+		
+		
+	}
+
+}

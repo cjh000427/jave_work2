@@ -1,0 +1,38 @@
+package etc.api.io.stream;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
+public class StreamCopy {
+
+	public static void main(String[] args) {
+
+		FileInputStream oldFile = null;
+		FileOutputStream newFile = null;
+		
+		try {
+			oldFile = new FileInputStream("C:\\Work\\file\\picture.jpg");
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+

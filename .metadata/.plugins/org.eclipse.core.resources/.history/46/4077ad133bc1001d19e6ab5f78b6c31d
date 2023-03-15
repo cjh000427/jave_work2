@@ -1,0 +1,10 @@
+package etc.api.random;
+
+public class RandomExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

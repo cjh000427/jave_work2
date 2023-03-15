@@ -4,24 +4,26 @@ import java.util.Arrays;
 
 public class ArraysQuiz {
 
-	public static String solution(String[] articipant, String[] completion) {
+	public static String solution(String[] participant, String[] completion) {
 
 		int failIdx = 0;
-		Arrays.sort(articipant);
+		Arrays.sort(participant);
 		Arrays.sort(completion);
 		
-		Arrays.equals(articipant, completion);
-		
-		for(int i=0; i<articipant.length; i++) {
-			if(articipant[i].equals(completion[i])) {
+		for(int i=0; i<participant.length; i++) {
+			if(participant[i].equals(completion[i])) {
 				continue;
 			} else {
-				failIdx = Arrays.binarySearch(articipant, articipant[i]);
+				failIdx = Arrays.binarySearch(participant, participant[i]);
 				break;
 			}
 			
 		}
-		return articipant[failIdx];
+		return participant[failIdx];
+		
+		
+		
+		
 		
 		/*
         - 참가한 사람의 이름이 담긴 배열 participant와

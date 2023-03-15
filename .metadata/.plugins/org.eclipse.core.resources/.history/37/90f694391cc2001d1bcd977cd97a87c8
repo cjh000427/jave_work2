@@ -1,0 +1,10 @@
+package etc.api.io.folder;
+
+public class CreateFolder {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

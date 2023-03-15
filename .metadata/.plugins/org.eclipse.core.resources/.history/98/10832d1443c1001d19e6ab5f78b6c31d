@@ -1,0 +1,66 @@
+package etc.collection.list;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ArrayListExample {
+
+	public static void main(String[] args) {
+
+		/*
+		 # ArrayList
+		 - 배열과 다르게 크기가 자동으로 조절되는 자료구조 클래스.
+		 - 배열과 유사한 형태이기 때문에 순차적으로 데이터에 접근하기가 좋다.
+		 - 인덱스를 활용하며, 객체의 중복 저장을 허용한다.
+		 */
+		//List는 메서드만을 이용해서 사용
+		
+		List<String> nick = new ArrayList<>();
+		
+		String str = "야옹이";
+		
+		//add(객체): 리스트에 객체를 추가하는 메서드
+		nick.add("멍멍이");
+		nick.add(str);
+		nick.add(new String("개구리"));
+		nick.add("쨱짹이");
+		nick.add("야옹이");
+		System.out.println(nick);
+		
+		//add(인덱스, 객체): 특정 인덱스에 객체를 삽입하는 메서드
+		nick.add(3, "어흥이");
+		System.out.println(nick);
+		
+		//get(인데스): 리스트 내부의 객체를 참조하는 메서드
+//		String name = nick[3]; (x)
+		String name = nick.get(3);
+		System.out.println("3번 인덱스의 값: " + name);
+		
+		//size(): 리스트의 크기를 반환
+		System.out.println("nick의 크기: " + nick.size());
+		
+		//set(인덱스, 수정할 객체): 리스트 내부의 객체를 수정
+		nick.set(2, "삐약이");
+		System.out.println(nick);
+ 		
+		
+		
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

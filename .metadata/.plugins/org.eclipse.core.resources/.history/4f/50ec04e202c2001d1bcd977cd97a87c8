@@ -1,0 +1,23 @@
+package etc.generic.bad;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+
+		Box box = new Box();
+		box.setObj("홍길동");
+		
+		Box box2 = new Box();
+		box2.setObj("길철수");
+		
+		if(box.getObj().equals(box2.getObj())) {
+			System.out.println("이름이 같습니다.");
+		} else {
+			System.out.println("이름이 다릅니다.");
+		}
+		
+		
+		
+	}
+
+}
