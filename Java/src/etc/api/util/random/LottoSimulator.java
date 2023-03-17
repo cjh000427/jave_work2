@@ -26,7 +26,7 @@ public class LottoSimulator {
 		  중복이 발생하면 안됩니다.
 		 */
 		Set<Integer> lotto = new HashSet<>();
-		while(lotto.size() <6) {
+		while(lotto.size() < 6) { //6개가 되는 순간 while문 종료
 			int num = r.nextInt(45) + 1;
 			lotto.add(num);
 		}
@@ -94,9 +94,6 @@ public class LottoSimulator {
 			failCnt++;			
 		}
 
-
-
-
 	}
 
 	public static void main(String[] args) {
@@ -133,13 +130,14 @@ public class LottoSimulator {
 			if(prize1 == 1) break;
 			
 		}
-		
+		System.out.println("1등 번호" + win);
 		System.out.println("1등 당첨!!");
 		System.out.println("2등 횟수: " + prize2);
 		System.out.println("3등 횟수: " + prize3);
 		System.out.println("4등 횟수: " + prize4);
 		System.out.println("5등 횟수: " + prize5);
 		System.out.println("꽝 횟수: " + failCnt);
+		System.out.println("---------------------------------------");
 		System.out.println("1등까지 사용한 금액: " + (buyLotto*1000) + "원");
 		System.out.println(buyLotto + "번 구매함");
 		

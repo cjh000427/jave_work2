@@ -2,16 +2,17 @@ package chap2_CJH.quiz02;
 
 public class Car {
 
-	String model;
-	int speed;
-	char mode;
-	boolean start;
+	private String model;
+	private int speed;
+	private char mode;
+	private boolean start;
 	
 	public Car(String model) {
 		this.model = model;
+		System.out.println("모델명: " + model);
 	}
 
-	void engineStart() {
+	public void engineStart() {
 		System.out.println("시동버튼을 눌렀습니다.");
 		this.injectOil();
 		this.injectGasoline();
@@ -20,29 +21,30 @@ public class Car {
 		System.out.println("시동이 걸렸습니다.");
 	}
 	
-	void injectGasoline() {
-		System.out.println("연료가 엔진에 주입됩니다.");
-	}
-	
-	void injectOil() {
+	private void injectOil() {
 		System.out.println("엔진오일이 순환합니다.");
 	}
 	
-	void moveCylinder() {
+	private void injectGasoline() {
+		System.out.println("연료가 엔진에 주입됩니다.");
+	}
+	
+	private void moveCylinder() {
 		if(start) {
 			System.out.println("실린더가 움직입니다.");
 		} else {
-			System.out.println("실리더가 움직이지 않습니다.");
+			System.out.println("실린더가 움직이지 않습니다.");
 		}
 	}
 	
-	void engineStop() {
-		if(speed > 0) {
+	public void engineStop() {
+		if(this.speed > 0) {
 			System.out.println("주행 중에는 시동을 끌 수 없습니다.");
-			
-		} else if(speed == 0) {
-			if(mode != 'P') {
+			return;
+		} else if(this.speed == 0) {
+			if(this.mode != 'P') {
 				System.out.println("P모드로 먼저 변속기를 변경하세요.");
+				return;
 			} else {
 				System.out.println("시동이 꺼졌습니다.");
 				this.start = false;
@@ -51,33 +53,24 @@ public class Car {
 	}
 	
 	
-	
-	
-	
-	
-	
-	public String getModel() {
-		return model;
-	}
-
-	public void setModel(String model) {
-		this.model = model;
-	}
-
 	public int getSpeed() {
 		return speed;
 	}
 
 	public void setSpeed(int speed) {
-		if(start == false) {
+		if(!start) {
 			System.out.println("시동을 먼저 걸어야 합니다.");
+			return;
 		} else {
 			if(speed < 0 || speed >= 200) {
 				System.out.println("속도를 다시 입력하세요.");
+				return;
 			} else if(mode == 'N' || mode == 'P') {
 				System.out.println("기어를 다시 입력하세요.");
-			} else if(mode == 'P' && speed > 40) {
+				return;
+			} else if(mode == 'R' && speed > 40) {
 				System.out.println("R모드는 속도를 40 초과하면 안됩니다.");
+				return;
 			}
 		}
 		this.speed = speed;
@@ -90,12 +83,15 @@ public class Car {
 	public void setMode(char mode) {
 		if(mode == 'D') {
 			System.out.println("D모드 입니다.");
+			this.mode = mode;
 		} else if(mode == 'N') {
 			System.out.println("N모드 입니다.");
+			this.mode = mode;
 		} else if(mode == 'R') {
 			System.out.println("R모드 입니다.");
+			this.mode = mode;
 		} else {
-			this.mode = 'R';
+			this.mode = 'P';
 		}
 		
 		this.mode = mode;

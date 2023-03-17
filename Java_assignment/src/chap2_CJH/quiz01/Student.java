@@ -5,7 +5,7 @@ public class Student extends Person {
 	String studentId;
 	
 	public String info() {
-		return super.info() + "학번: " + studentId;
+		return super.info() + " 학번: " + studentId;
 	}
 	
 }

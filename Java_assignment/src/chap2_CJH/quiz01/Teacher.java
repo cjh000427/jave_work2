@@ -5,7 +5,7 @@ public class Teacher extends Person {
 	String subject;
 	
 	public String info() {
-		return super.info()+ "과목: " + subject;
+		return super.info()+ " 과목: " + subject;
 	}
 	
 	

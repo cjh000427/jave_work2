@@ -6,7 +6,7 @@ public class MainClass {
 
 		Car myCar = new Car("마이카");
 		
-		myCar.setSpeed(10);
+		myCar.setSpeed(100);
 		System.out.println("-----------------");
 		myCar.engineStart();
 		myCar.setMode('D');
