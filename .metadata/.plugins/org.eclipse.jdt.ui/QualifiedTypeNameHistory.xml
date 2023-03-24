@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="oop.inter.good.Update"/>
     <fullyQualifiedTypeName name="oop.inter.good.Delete"/>
     <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
     <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="chap3_CJH.Product"/>
+    <fullyQualifiedTypeName name="chap4_CJH.Student"/>
 </qualifiedTypeNameHistroy>

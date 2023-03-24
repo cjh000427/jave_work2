@@ -50,16 +50,17 @@ public class MyCart {
 	 */
 
 	private void add(Product p) {
-		if(i >= cart.length) {
-			Product temp[] = new Product[i*2];
+		if(i >= cart.length) { //배열에 자리가 없을 때.
+			Product[] temp = new Product[cart.length*2];
 			for(int j=0; j<cart.length; j++) {
 				temp[j] = cart[j];
 			}
 			cart = temp;
+			temp = null;
 		}
-		cart[i]=p;
+		cart[i]=p; // 물건을 배열에 추가
 		i++;
-		//info();
+		info();
 	}
 
 	/*
@@ -73,19 +74,33 @@ public class MyCart {
 	 */
 
 	public void info() {
-		System.out.println("----------------------------------");
-		if(this.money < 0) {
-			System.out.println("잔액이 없습니다.");
-		} else {
-			int total=0;
-			for(Product p : cart) {
-				if(p==null) break;
-				total += p.price;
-				System.out.println("내가 구입한 물건: " + p.name);
-			}
-			System.out.println("내가 사용한 금액: " + total);
-			System.out.println("남은 금액: " + this.money);
+//		System.out.println("----------------------------------");
+//		if(this.money < 0) {
+//			System.out.println("잔액이 없습니다.");
+//		} else {
+//			int total=0;
+//			for(Product p : cart) {
+//				if(p==null) break;
+//				total += p.price;
+//				System.out.println("내가 구입한 물건: " + p.name);
+//			}
+//			System.out.println("내가 사용한 금액: " + total);
+//			System.out.println("남은 금액: " + this.money);
+//		}
+		System.out.println("-----------------------------");
+		System.out.println("*** 현재 장바구니 정보 ***");
+		
+		int sum = 0; // 총 상품의 합계를 담아줄 변수
+		
+		for(Product p : cart) {
+			if(p == null) break;
+			System.out.print(p.name + " ");
+			sum += p.price;
 		}
+		
+		System.out.println();
+		System.out.println("구매 금액 합계: " + sum + "원");
+		System.out.println("남은 금액: " + this.money + "원");
 	}
 
 

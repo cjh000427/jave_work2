@@ -29,13 +29,28 @@ public class Student {
 		this.stuId = sc.next();
 		System.out.print("- 이름: ");
 		this.name = sc.next();
-
 		/*
 		국어, 영어, 수학 점수를 입력받습니다. 
 		혹시라도 정수가 아닌 다른 값이 들어올 시에 
 		예외처리를 해서, 다시 점수를 입력받을 수 있는
 		무한 루프를 구성해 주세요.
 		*/	
+		
+		while(true) {
+			try {
+				System.out.print("국어: ");
+				this.kor = sc.nextInt();
+				System.out.print("영어: ");
+				this.eng = sc.nextInt();
+				System.out.print("수학: ");
+				this.math = sc.nextInt();
+				break;
+			} catch (Exception e) {
+				System.out.println("점수는 숫자로만 입력하세요!");
+				sc.nextLine(); // 잘못 입력한 값을 수거해 주는 코드 **필수로 작성해야 함!
+			}
+		}
+		
 	}
 
 	//총점, 평균, 학점을 계산하는 메서드
@@ -50,7 +65,7 @@ public class Student {
 	}
 
 	//학생의 성적 정보를 출력하는 메서드
-	public void outputStuInfo() {
+	public void outputStuInfo() {  // %4s 에서 4는 문자뒤에 4만큼의 공간을 사용한다는 뜻
 		System.out.printf("%4s %6s %6d점 %5d점 %7d점 %7d점 %7.2f점 %6s\n"
 				, this.stuId, this.name, this.kor, this.eng, 
 				this.math, this.total, this.average, this.grade);

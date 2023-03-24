@@ -33,41 +33,54 @@ public class Point {
 	}
 
 	//1. 학생의 성적 정보를 입력할 메서드
-//	public void inputPoints(???) {
-//		/*
-//		 1. 학생 객체를 1개 생성합니다.
-//		 2. 학생 객체에 속성값을 설정하는 메서드들을 호출해야 합니다.
-//		 3. 정보 저장이 완료된 객체를 리스트(sList)에 추가해야 합니다.
-//		 4. 저장 완료 메세지를 호출하세요.
-//		 ex) XXX님의 성적 정보가 정상적으로 입력되었습니다.
-//		 */
-//		
-//	}
+	public void inputPoints(List<Student> students) {
+		/*
+		 1. 학생 객체를 1개 생성합니다.
+		 2. 학생 객체에 속성값을 설정하는 메서드들을 호출해야 합니다.
+		 3. 정보 저장이 완료된 객체를 리스트(sList)에 추가해야 합니다.
+		 4. 저장 완료 메세지를 호출하세요.
+		 ex) XXX님의 성적 정보가 정상적으로 입력되었습니다.
+		 */
+		Student stu = new Student();
+		students.add(stu);
+		System.out.printf("%s님의 성적 정보가 정상적으로 입력되었습니다.\n"
+				, stu.getName());
+		
+		
+	}
 
 	//2. 전체 학생들의 성적 정보를 출력할 메서드
-//	public void showAllPoints(???) { //학생 객체들이 들어있는 리스트가 와야죠?
-//
-//		/*
-//		 1. 리스트 안에 들어있는 학생 객체들의 정보를
-//		  반복문을 이용하여 하나씩 전체 출력해야 합니다.
-//		  한 명의 학생 정보를 출력하는 메서드는 이미 작성 했습니다. (Student 클래스 -> outputStuInfo)
-//
-//		 2. 학생 점수를 출력할 때 showPointUI를 먼저 출력하고
-//		  학생들의 점수를 밑에 반복 출력해 주세요.
-//
-//		 3. 우리 반 평균을 가장 아랫부분에 출력해야 합니다.
-//		 */
-//		
-//		
-//
-//	}
+	public void showAllPoints(List<Student> students) { //학생 객체들이 들어있는 리스트가 와야죠?
+		/*
+		 1. 리스트 안에 들어있는 학생 객체들의 정보를
+		  반복문을 이용하여 하나씩 전체 출력해야 합니다.
+		  한 명의 학생 정보를 출력하는 메서드는 이미 작성 했습니다. (Student 클래스 -> outputStuInfo)
+
+		 2. 학생 점수를 출력할 때 showPointUI를 먼저 출력하고
+		  학생들의 점수를 밑에 반복 출력해 주세요.
+
+		 3. 우리 반 평균을 가장 아랫부분에 출력해야 합니다.
+		 */
+		double totalAvg = 0.0; //
+		
+		showPointUI();
+		for(Student stu : students) {
+			stu.outputStuInfo();
+			totalAvg += stu.getAverage();
+		}
+		System.out.println("------------------------------------------------");
+		System.out.printf("\t\t\t\t\t 우리반 전체 평균: %.2f\n"
+				,totalAvg / students.size());
+		
+
+	}
 
 	//3. 개별 성적 조회 로직을 처리할 메서드
 	
 	public void searchPoint(List<Student> students) {
-		System.out.println("성적을 조회할 학생의 학번을 입력하세요.");
-		System.out.print("> ");
-		String stuNum = sc.next();
+//		System.out.println("성적을 조회할 학생의 학번을 입력하세요.");
+//		System.out.print("> ");
+//		String stuNum = sc.next();
 		
 		/*
 		 1. 입력받은 학번과 일치하는 학생 객체를 리스트에서 찾아내어
@@ -76,6 +89,38 @@ public class Point {
 		  메세지를 출력해 주세요.
 		 */
 		
+//		boolean flag = false;
+	//		/*
+	//		if(students.contains(stuNum)) { 
+	// 			false만 나옴.
+	//			이유는 students 와 stuNum 은 다른 타입이다.
+	//			그러므로 반복문을 사용해서 학번일치를 찾아야 한다.
+	//		}
+	//		*/
+//		for(Student stu : students) {
+//			if(stuNum.equals(stu.getStuId())) {
+//				System.out.printf("%s님의 성적 정보를 출력합니다.\n"
+//						, stu.getName());
+//				showPointUI();
+//				stu.outputStuInfo();
+//				flag = true;
+//				break;
+//			}
+//		}
+//		
+//		if(!flag) {
+//			System.out.println("입력한 학번과 일치하는 학생 정보가 없습니다.");
+//		}
+		
+		Student stu = findInstance("조회", students); 
+		if(stu != null) {
+			System.out.printf("%s님의 성적 정보를 출력합니다.\n"
+					, stu.getName());
+			showPointUI();
+			stu.outputStuInfo();
+		} else {
+			System.out.println("입력한 학번과 일치하는 학생 정보가 없습니다.");
+		}
 		
 	}
 	
@@ -91,8 +136,40 @@ public class Point {
 		  
 		 - 찾는 학번이 없을 시 검색하지 못했다는 메세지를 출력해 주세요.
 		 */
+		System.out.println("성적을 수정할 학생의 학번을 입력하세요.");
+		System.out.print("> ");
+		String stuNum = sc.next();
 		
+		boolean flag = false;
 		
+		for(Student stu: students) {
+			if(stu.getStuId().equals(stuNum)) {
+				System.out.printf("%s님의 성적 정보를 수정합니다.\n"
+						,stu.getName());
+				while(true) {
+					try {
+						System.out.print("국어: ");
+						stu.setKor(sc.nextInt());
+						System.out.print("영어: ");
+						stu.setEng(sc.nextInt());
+						System.out.print("수학: ");
+						stu.setMath(sc.nextInt());
+						break; //while true break 
+					} catch (Exception e) {
+						System.out.println("정수로만 입력하세요!");
+						sc.nextLine();
+					}
+				}
+				stu.calcTotAvgGrade();
+				System.out.println("성적 수정이 정상 처리되었습니다.");
+				flag = true;
+				break; //학생 검색하는 for문 break 
+			}
+		}
+		
+		if(!flag) {
+			System.out.println("해당 학번과 일치하는 학생 정보가 없습니다.");
+		}
 		
 	}
 	
@@ -107,21 +184,55 @@ public class Point {
 		  
 		 - 학생이 없다면 없다고도 출력해 주세요.
 		 */
+		System.out.println("정보를 삭제할 학생의 학번을 입력하세요.");
+		System.out.print("> ");
+		String stuNum = sc.next();
 		
-		
+		boolean flag = false;
+		for(Student stu : students) {
+			if(stuNum.equals(stu.getStuId())) {
+				System.out.printf("%s학생의 성적 정보를 삭제합니다. [Y / N]\n"
+						, stu.getName());
+				System.out.print("> ");
+				String answer = sc.next();
+				
+				if(answer.toUpperCase().equals("Y")) {
+					students.remove(stu);
+					System.out.println("삭제가 정상 처리되었습니다.");
+				} else {
+					System.out.println("삭제를 취소합니다.");
+					return;
+				}
+				flag = true;
+				break;
+			}
+		}
+		if(!flag) {
+			System.out.println("해당 학번과 일치하는 학생 정보가 없습니다.");
+		}
 	}
 	
-	
-	
-	
-	
-
 	
 	public void close() {
 		sc.close();
 	}
 	
 
+	private Student findInstance(String req, List<Student> list) {
+		System.out.printf("%s하실 학생의 학번을 입력하세요.\n"
+				, req);
+		System.out.print("> ");
+		String stuNum = sc.next();
+		
+		for(Student stu : list) {
+			if(stuNum.equals(stu.getStuId())) {
+				return stu;
+			}
+		}
+		return null;
+	}
+	
+	
 
 }
 
