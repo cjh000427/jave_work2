@@ -12,7 +12,6 @@
     <fullyQualifiedTypeName name="chap2_CJH.quiz01.Employee"/>
     <fullyQualifiedTypeName name="etc.api.lang.obj.Person"/>
     <fullyQualifiedTypeName name="java.lang.Cloneable"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.lang.Byte"/>
     <fullyQualifiedTypeName name="java.lang.Boolean"/>
     <fullyQualifiedTypeName name="java.lang.Character"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="chap3_CJH.Product"/>
     <fullyQualifiedTypeName name="chap4_CJH.Student"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>
